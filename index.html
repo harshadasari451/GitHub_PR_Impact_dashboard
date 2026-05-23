@@ -129,10 +129,19 @@ function renderTop5(engineers) {
       </a>
       <div class="text-2xl font-bold mt-2 ${scoreColor(eng.final_score)}">${eng.final_score}</div>
       <div class="text-xs text-gray-500">impact score</div>
-      <div class="flex gap-2 mt-2 text-xs text-gray-400">
-        <span title="PRs authored">📦 ${eng.prs_authored}</span>
-        <span title="Reviews given">🔍 ${eng.reviews_given}</span>
-        <span title="Active days">📅 ${eng.active_days}d</span>
+      <div class="flex gap-3 mt-2">
+        <div class="text-center">
+          <div class="text-xs text-gray-300">📦 ${eng.prs_authored}</div>
+          <div class="text-gray-500" style="font-size:0.6rem">PRs merged</div>
+        </div>
+        <div class="text-center">
+          <div class="text-xs text-gray-300">🔍 ${eng.reviews_given}</div>
+          <div class="text-gray-500" style="font-size:0.6rem">reviews given</div>
+        </div>
+        <div class="text-center">
+          <div class="text-xs text-gray-300">📅 ${eng.active_days}d</div>
+          <div class="text-gray-500" style="font-size:0.6rem">days active</div>
+        </div>
       </div>
     `;
     container.appendChild(card);

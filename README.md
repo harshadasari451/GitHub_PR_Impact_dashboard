@@ -18,6 +18,8 @@ An interactive dashboard that identifies the most impactful engineers in the [Po
 
 ### Defining Impact
 
+At a fast-moving, open-source company like PostHog, impact means two things: shipping reliably yourself, and raising the team's floor by unblocking others. An engineer who merges 10 PRs and reviews 40 more — especially stale ones nobody else touches — creates more total output than one who merges 30 PRs in isolation. This is the core premise behind the scoring model.
+
 Five dimensions, each min-max normalized to 0–100 across all contributors, then combined into a weighted composite score:
 
 | Dimension | Weight | How it's computed | Why |

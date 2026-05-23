@@ -1,0 +1,456 @@
+{
+  "generated_at": "2026-05-22T22:53:01.917095+00:00",
+  "repo": "PostHog/posthog",
+  "days_analyzed": 90,
+  "total_prs_analyzed": 7505,
+  "total_engineers_found": 151,
+  "weights": {
+    "centrality": 0.35,
+    "review_influence": 0.3,
+    "bottleneck_resolve": 0.2,
+    "code_quality": 0.1,
+    "consistency": 0.05
+  },
+  "leaderboard": [
+    {
+      "login": "greptile-apps[bot]",
+      "avatar_url": "https://avatars.githubusercontent.com/in/867647?v=4",
+      "github_url": "https://github.com/greptile-apps[bot]",
+      "prs_authored": 0,
+      "reviews_given": 7665,
+      "active_days": 90,
+      "unique_reviewers": 0,
+      "scores": {
+        "centrality": 100.0,
+        "review_influence": 76.9,
+        "bottleneck_resolve": 4.1,
+        "code_quality": 0.0,
+        "consistency": 100.0
+      },
+      "final_score": 63.9
+    },
+    {
+      "login": "pauldambra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/984817?v=4",
+      "github_url": "https://github.com/pauldambra",
+      "prs_authored": 353,
+      "reviews_given": 393,
+      "active_days": 81,
+      "unique_reviewers": 33,
+      "scores": {
+        "centrality": 30.7,
+        "review_influence": 90.8,
+        "bottleneck_resolve": 24.1,
+        "code_quality": 100.0,
+        "consistency": 89.9
+      },
+      "final_score": 57.3
+    },
+    {
+      "login": "sortafreel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/354488?v=4",
+      "github_url": "https://github.com/sortafreel",
+      "prs_authored": 42,
+      "reviews_given": 558,
+      "active_days": 34,
+      "unique_reviewers": 8,
+      "scores": {
+        "centrality": 25.1,
+        "review_influence": 89.4,
+        "bottleneck_resolve": 92.0,
+        "code_quality": 11.2,
+        "consistency": 37.1
+      },
+      "final_score": 57.0
+    },
+    {
+      "login": "skoob13",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13541795?v=4",
+      "github_url": "https://github.com/skoob13",
+      "prs_authored": 141,
+      "reviews_given": 131,
+      "active_days": 57,
+      "unique_reviewers": 15,
+      "scores": {
+        "centrality": 15.7,
+        "review_influence": 88.5,
+        "bottleneck_resolve": 85.7,
+        "code_quality": 42.6,
+        "consistency": 62.9
+      },
+      "final_score": 56.6
+    },
+    {
+      "login": "jose-sequeira",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117165826?v=4",
+      "github_url": "https://github.com/jose-sequeira",
+      "prs_authored": 79,
+      "reviews_given": 150,
+      "active_days": 41,
+      "unique_reviewers": 16,
+      "scores": {
+        "centrality": 11.5,
+        "review_influence": 98.7,
+        "bottleneck_resolve": 81.9,
+        "code_quality": 24.1,
+        "consistency": 44.9
+      },
+      "final_score": 54.7
+    },
+    {
+      "login": "hpouillot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3455883?v=4",
+      "github_url": "https://github.com/hpouillot",
+      "prs_authored": 71,
+      "reviews_given": 61,
+      "active_days": 46,
+      "unique_reviewers": 11,
+      "scores": {
+        "centrality": 10.7,
+        "review_influence": 91.8,
+        "bottleneck_resolve": 93.3,
+        "code_quality": 20.1,
+        "consistency": 50.6
+      },
+      "final_score": 54.5
+    },
+    {
+      "login": "carlos-marchal-ph",
+      "avatar_url": "https://avatars.githubusercontent.com/u/228468567?v=4",
+      "github_url": "https://github.com/carlos-marchal-ph",
+      "prs_authored": 52,
+      "reviews_given": 90,
+      "active_days": 29,
+      "unique_reviewers": 15,
+      "scores": {
+        "centrality": 10.5,
+        "review_influence": 92.2,
+        "bottleneck_resolve": 100.0,
+        "code_quality": 15.2,
+        "consistency": 31.5
+      },
+      "final_score": 54.4
+    },
+    {
+      "login": "joshsny",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7135900?v=4",
+      "github_url": "https://github.com/joshsny",
+      "prs_authored": 67,
+      "reviews_given": 172,
+      "active_days": 48,
+      "unique_reviewers": 12,
+      "scores": {
+        "centrality": 15.7,
+        "review_influence": 95.9,
+        "bottleneck_resolve": 76.0,
+        "code_quality": 18.6,
+        "consistency": 52.8
+      },
+      "final_score": 54.0
+    },
+    {
+      "login": "TueHaulund",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2675352?v=4",
+      "github_url": "https://github.com/TueHaulund",
+      "prs_authored": 97,
+      "reviews_given": 57,
+      "active_days": 61,
+      "unique_reviewers": 11,
+      "scores": {
+        "centrality": 10.7,
+        "review_influence": 87.7,
+        "bottleneck_resolve": 88.6,
+        "code_quality": 28.1,
+        "consistency": 67.4
+      },
+      "final_score": 54.0
+    },
+    {
+      "login": "sampennington",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56024559?v=4",
+      "github_url": "https://github.com/sampennington",
+      "prs_authored": 235,
+      "reviews_given": 47,
+      "active_days": 69,
+      "unique_reviewers": 9,
+      "scores": {
+        "centrality": 10.5,
+        "review_influence": 85.1,
+        "bottleneck_resolve": 60.4,
+        "code_quality": 72.1,
+        "consistency": 76.4
+      },
+      "final_score": 52.3
+    },
+    {
+      "login": "graphite-app[bot]",
+      "avatar_url": "https://avatars.githubusercontent.com/in/158384?v=4",
+      "github_url": "https://github.com/graphite-app[bot]",
+      "prs_authored": 0,
+      "reviews_given": 1725,
+      "active_days": 86,
+      "unique_reviewers": 0,
+      "scores": {
+        "centrality": 54.9,
+        "review_influence": 69.4,
+        "bottleneck_resolve": 37.6,
+        "code_quality": 0.0,
+        "consistency": 95.5
+      },
+      "final_score": 52.3
+    },
+    {
+      "login": "rafaeelaudibert",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32079912?v=4",
+      "github_url": "https://github.com/rafaeelaudibert",
+      "prs_authored": 103,
+      "reviews_given": 249,
+      "active_days": 57,
+      "unique_reviewers": 18,
+      "scores": {
+        "centrality": 22.9,
+        "review_influence": 88.4,
+        "bottleneck_resolve": 56.2,
+        "code_quality": 27.9,
+        "consistency": 62.9
+      },
+      "final_score": 51.7
+    },
+    {
+      "login": "Twixes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4550621?v=4",
+      "github_url": "https://github.com/Twixes",
+      "prs_authored": 78,
+      "reviews_given": 90,
+      "active_days": 47,
+      "unique_reviewers": 17,
+      "scores": {
+        "centrality": 14.6,
+        "review_influence": 90.0,
+        "bottleneck_resolve": 73.3,
+        "code_quality": 22.6,
+        "consistency": 51.7
+      },
+      "final_score": 51.6
+    },
+    {
+      "login": "webjunkie",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59713?v=4",
+      "github_url": "https://github.com/webjunkie",
+      "prs_authored": 212,
+      "reviews_given": 51,
+      "active_days": 57,
+      "unique_reviewers": 16,
+      "scores": {
+        "centrality": 22.7,
+        "review_influence": 76.5,
+        "bottleneck_resolve": 58.7,
+        "code_quality": 55.6,
+        "consistency": 62.9
+      },
+      "final_score": 51.3
+    },
+    {
+      "login": "andrewm4894",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2178292?v=4",
+      "github_url": "https://github.com/andrewm4894",
+      "prs_authored": 207,
+      "reviews_given": 41,
+      "active_days": 64,
+      "unique_reviewers": 18,
+      "scores": {
+        "centrality": 11.1,
+        "review_influence": 92.7,
+        "bottleneck_resolve": 52.1,
+        "code_quality": 56.1,
+        "consistency": 70.8
+      },
+      "final_score": 51.3
+    },
+    {
+      "login": "Gilbert09",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1459269?v=4",
+      "github_url": "https://github.com/Gilbert09",
+      "prs_authored": 120,
+      "reviews_given": 131,
+      "active_days": 40,
+      "unique_reviewers": 12,
+      "scores": {
+        "centrality": 13.1,
+        "review_influence": 92.4,
+        "bottleneck_resolve": 68.7,
+        "code_quality": 29.9,
+        "consistency": 43.8
+      },
+      "final_score": 51.2
+    },
+    {
+      "login": "ReeceJones",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21371637?v=4",
+      "github_url": "https://github.com/ReeceJones",
+      "prs_authored": 69,
+      "reviews_given": 73,
+      "active_days": 45,
+      "unique_reviewers": 11,
+      "scores": {
+        "centrality": 9.4,
+        "review_influence": 93.2,
+        "bottleneck_resolve": 76.3,
+        "code_quality": 19.9,
+        "consistency": 49.4
+      },
+      "final_score": 51.0
+    },
+    {
+      "login": "yasen-posthog",
+      "avatar_url": "https://avatars.githubusercontent.com/u/213223200?v=4",
+      "github_url": "https://github.com/yasen-posthog",
+      "prs_authored": 84,
+      "reviews_given": 62,
+      "active_days": 45,
+      "unique_reviewers": 12,
+      "scores": {
+        "centrality": 10.5,
+        "review_influence": 93.5,
+        "bottleneck_resolve": 71.3,
+        "code_quality": 24.5,
+        "consistency": 49.4
+      },
+      "final_score": 50.9
+    },
+    {
+      "login": "VojtechBartos",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1526646?v=4",
+      "github_url": "https://github.com/VojtechBartos",
+      "prs_authored": 69,
+      "reviews_given": 21,
+      "active_days": 42,
+      "unique_reviewers": 15,
+      "scores": {
+        "centrality": 9.8,
+        "review_influence": 85.7,
+        "bottleneck_resolve": 87.5,
+        "code_quality": 18.8,
+        "consistency": 46.1
+      },
+      "final_score": 50.8
+    },
+    {
+      "login": "fercgomes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28491014?v=4",
+      "github_url": "https://github.com/fercgomes",
+      "prs_authored": 78,
+      "reviews_given": 122,
+      "active_days": 54,
+      "unique_reviewers": 12,
+      "scores": {
+        "centrality": 7.2,
+        "review_influence": 91.0,
+        "bottleneck_resolve": 78.7,
+        "code_quality": 21.6,
+        "consistency": 59.6
+      },
+      "final_score": 50.7
+    }
+  ],
+  "top5": [
+    {
+      "login": "greptile-apps[bot]",
+      "avatar_url": "https://avatars.githubusercontent.com/in/867647?v=4",
+      "github_url": "https://github.com/greptile-apps[bot]",
+      "prs_authored": 0,
+      "reviews_given": 7665,
+      "active_days": 90,
+      "unique_reviewers": 0,
+      "scores": {
+        "centrality": 100.0,
+        "review_influence": 76.9,
+        "bottleneck_resolve": 4.1,
+        "code_quality": 0.0,
+        "consistency": 100.0
+      },
+      "final_score": 63.9
+    },
+    {
+      "login": "pauldambra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/984817?v=4",
+      "github_url": "https://github.com/pauldambra",
+      "prs_authored": 353,
+      "reviews_given": 393,
+      "active_days": 81,
+      "unique_reviewers": 33,
+      "scores": {
+        "centrality": 30.7,
+        "review_influence": 90.8,
+        "bottleneck_resolve": 24.1,
+        "code_quality": 100.0,
+        "consistency": 89.9
+      },
+      "final_score": 57.3
+    },
+    {
+      "login": "sortafreel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/354488?v=4",
+      "github_url": "https://github.com/sortafreel",
+      "prs_authored": 42,
+      "reviews_given": 558,
+      "active_days": 34,
+      "unique_reviewers": 8,
+      "scores": {
+        "centrality": 25.1,
+        "review_influence": 89.4,
+        "bottleneck_resolve": 92.0,
+        "code_quality": 11.2,
+        "consistency": 37.1
+      },
+      "final_score": 57.0
+    },
+    {
+      "login": "skoob13",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13541795?v=4",
+      "github_url": "https://github.com/skoob13",
+      "prs_authored": 141,
+      "reviews_given": 131,
+      "active_days": 57,
+      "unique_reviewers": 15,
+      "scores": {
+        "centrality": 15.7,
+        "review_influence": 88.5,
+        "bottleneck_resolve": 85.7,
+        "code_quality": 42.6,
+        "consistency": 62.9
+      },
+      "final_score": 56.6
+    },
+    {
+      "login": "jose-sequeira",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117165826?v=4",
+      "github_url": "https://github.com/jose-sequeira",
+      "prs_authored": 79,
+      "reviews_given": 150,
+      "active_days": 41,
+      "unique_reviewers": 16,
+      "scores": {
+        "centrality": 11.5,
+        "review_influence": 98.7,
+        "bottleneck_resolve": 81.9,
+        "code_quality": 24.1,
+        "consistency": 44.9
+      },
+      "final_score": 54.7
+    }
+  ],
+  "methodology": {
+    "centrality": "Network position: unique authors you reviewed (\u00d71.5) + unique people who reviewed you. High score = you're a hub, not a leaf.",
+    "review_influence": "% of your review comments where more activity followed on the PR. Measures whether your feedback actually changed things.",
+    "bottleneck_resolve": "log(median PR age when you first commented) \u00d7 log(PRs reviewed). Rewards picking up stale PRs nobody else is touching.",
+    "code_quality": "PRs authored \u00d7 (1 - review_rounds/3). Fewer revision cycles means cleaner first submissions.",
+    "consistency": "Unique active days in the window. Rewards steady contribution over occasional burst activity."
+  },
+  "data_sources": {
+    "merged_prs": "GET /repos/PostHog/posthog/pulls (bulk paginated)",
+    "review_comments": "GET /repos/PostHog/posthog/pulls/comments (bulk paginated)",
+    "pr_events": "GET /repos/PostHog/posthog/issues/events (bulk paginated)",
+    "note": "Zero per-PR API calls \u2014 all data from repo-wide bulk endpoints"
+  }
+}

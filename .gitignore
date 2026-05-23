@@ -1,0 +1,3 @@
+github_token.env
+__pycache__/
+*.pyc

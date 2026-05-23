@@ -5,24 +5,41 @@ An interactive dashboard that identifies the most impactful engineers in the [Po
 ## Approach
 
 ### Data Collection
-`fetch_and_score.py` pulls data from the GitHub API — specifically all merged PRs from the last 90 days, plus the review activity on each PR. No third-party libraries required (stdlib only).
+
+`fetch_and_score.py` pulls from three bulk GitHub API endpoints — no per-PR calls:
+
+| Endpoint | What it gives us |
+|---|---|
+| `GET /repos/{repo}/pulls` | All merged PRs in the window |
+| `GET /repos/{repo}/pulls/comments` | Every inline review comment across all PRs |
+| `GET /repos/{repo}/issues/events` | PR lifecycle events (reviews, closures) |
+
+~20–30 total API calls regardless of PR count. Stays well within GitHub's 5000/hr rate limit even for a high-volume repo like PostHog.
 
 ### Defining Impact
-Rather than ranking by raw commit counts or lines of code, impact is measured across four dimensions:
 
-| Dimension | Weight | Rationale |
-|---|---|---|
-| PRs Merged | 35% | Core authoring output |
-| Reviews Given | 35% | Approvals + change requests on others' PRs — a proxy for team leverage and unblocking others |
-| Code Volume | 15% | Lines added + deleted, signals scope of work |
-| Consistency | 15% | Active weeks out of 13 — rewards steady shipping over one-time bursts |
+Five dimensions, each min-max normalized to 0–100 across all contributors, then combined into a weighted composite score:
 
-Each dimension is min-max normalized across all contributors, then combined into a weighted composite score (0–100).
-
-The decision to weight reviews equally to PRs merged reflects a deliberate choice: an engineer who reviews 20 PRs a week may create more team-wide leverage than one who merges 20 PRs in isolation.
+| Dimension | Weight | How it's computed | Why |
+|---|---|---|---|
+| **Collaboration Centrality** | 35% | Unique authors you reviewed (×1.5) + unique people who reviewed you | Hub reviewers create more team leverage than leaf nodes |
+| **Review Influence** | 30% | % of your review comments where more activity followed on the PR | Measures whether your feedback actually changed things, not just that you showed up |
+| **Bottleneck Resolution** | 20% | `log(median PR age at first comment) × log(PRs reviewed)` | Rewards picking up old, stale PRs that nobody else is touching |
+| **Code Quality** | 10% | PRs authored × (1 − review_rounds / 3) | Fewer revision cycles = cleaner first submissions |
+| **Consistency** | 5% | Unique active days in the 90-day window | Steady contribution over the full period, not a single burst |
 
 ### Dashboard
-A fully static `index.html` — no backend, no build step. It reads a pre-generated `data.json` file, keeping load times well under 1 second. Hosted via GitHub Pages.
+
+Fully static `index.html` — no backend, no build step. Reads a pre-generated `data.json`, keeping load times under 1 second. Hosted via GitHub Pages.
+
+Features a radar chart comparing the five dimensions across the top 5 engineers, a full leaderboard, and a per-engineer score breakdown.
 
 ## Limitations
-GitHub's API surfaces activity signals, not outcomes. What's missing: whether a PR fixed a production incident, whether a review caught a critical bug, or whether an engineer mentored others through their PRs. The scores are a reasonable proxy within these constraints, not ground truth.
+
+These are proxies, not ground truth. A few known approximations:
+
+- **Review influence** uses "comment not being the last on the PR" as a signal that feedback triggered further action. A late-joining reviewer would score poorly even if their comment was the most important one.
+- **Bottleneck resolution** can't distinguish "I rescued a stale PR" from "I was slow to review" — both look the same in the data.
+- **Code quality** approximates revision rounds via unique reviewer count, since bulk endpoints don't expose `CHANGES_REQUESTED` events without per-PR calls.
+
+GitHub data surfaces activity signals, not outcomes. What's invisible: whether a PR fixed a production incident, whether a review caught a critical bug, or whether an engineer unblocked a teammate through Slack rather than GitHub comments. The scores are a reasonable signal within these constraints.
